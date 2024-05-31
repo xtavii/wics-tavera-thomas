@@ -46,7 +46,7 @@ const Wallet = () => {
   const handleAddTransaction = (transaction) => {
     const { date, ...rest } = transaction;
     const [day, month, year] = date.split('/');
-    const formattedDate = new Date(year, month - 1, day); // Date uses 0-based months
+    const formattedDate = new Date(year, month - 1, day); 
 
     const newTransaction = {
       ...rest,
@@ -56,7 +56,7 @@ const Wallet = () => {
 
     setTransactions(prevTransactions => {
       const updatedTransactions = [...prevTransactions, newTransaction];
-      // Ordina le transazioni per data in ordine decrescente
+      
       updatedTransactions.sort((a, b) => b.date - a.date);
       return updatedTransactions;
     });
