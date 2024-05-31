@@ -91,9 +91,9 @@ const Wallet = () => {
         <ul>
           {transactions.map((transaction) => (
             <li key={transaction.id}>
-              <span className="label" style={{ fontWeight: 'bold', marginRight: '140px' }}>{transaction.label}</span>
-              <span className="amount" style={{ marginRight: '140px' }}>{transaction.amount.toFixed(2)}€</span>
-              <span className="date" style={{ marginRight: '20px', color: '#19bdf4' }}>
+              <span className="label">{transaction.label}</span>
+              <span className="amount">{transaction.amount.toFixed(2)}€</span>
+              <span className="date">
                 {transaction.date.toLocaleDateString('it-IT')}
               </span>
             </li>
